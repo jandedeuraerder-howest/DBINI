@@ -1,0 +1,28 @@
+﻿<Window x:Class="DBINI.wpf.winPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DBINI.wpf"
+        mc:Ignorable="d"
+        Title="DB connectiegegevens opgeven" Height="450" Width="800" WindowStyle="ToolWindow" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="SQL server naam of IP" HorizontalAlignment="Left" Margin="32,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Poort nummer" HorizontalAlignment="Left" Margin="32,93,0,0" VerticalAlignment="Top"/>
+        <Label Content="Catalogus" HorizontalAlignment="Left" Margin="32,124,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.256,-0.673"/>
+        <Label x:Name="lblGebruikersnaam" Content="Gebruikersnaam" HorizontalAlignment="Left" Margin="32,162,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPaswoord" Content="Paswoord" HorizontalAlignment="Left" Margin="32,199,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtServer" HorizontalAlignment="Left" Height="23" Margin="184,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="442"/>
+        <TextBox x:Name="txtPoortnr" HorizontalAlignment="Left" Height="23" Margin="184,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231"/>
+        <Button x:Name="btnStandaardPoort" Content="Standaard SQL poort" HorizontalAlignment="Left" Margin="428,93,0,0" VerticalAlignment="Top" Width="198" Click="BtnStandaardPoort_Click"/>
+        <TextBox x:Name="txtCatalgus" HorizontalAlignment="Left" Height="23" Margin="184,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="442"/>
+        <TextBox x:Name="txtGebruikersnaam" HorizontalAlignment="Left" Height="23" Margin="184,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="442"/>
+        <PasswordBox x:Name="txtPaswoord" HorizontalAlignment="Left" Margin="184,207,0,0" VerticalAlignment="Top" Width="442" Height="23"/>
+        <Button x:Name="btnOpslaan" Content="Opslaan" HorizontalAlignment="Left" Margin="32,273,0,0" VerticalAlignment="Top" Width="104" Click="BtnOpslaan_Click"/>
+        <Button x:Name="btnEndApp" Content="Beëindig applicatie" HorizontalAlignment="Left" Margin="505,273,0,0" VerticalAlignment="Top" Width="121" Click="BtnEndApp_Click"/>
+        <Label Content="Authenticatie " HorizontalAlignment="Left" Margin="32,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.452,-1.038"/>
+        <RadioButton x:Name="rdbSQL" Content="SQL server authenticatie" HorizontalAlignment="Left" Margin="184,21,0,0" VerticalAlignment="Top" IsChecked="True" Click="RdbSQL_Click"/>
+        <RadioButton x:Name="rdbWindows" Content="Windows authenticatie" HorizontalAlignment="Left" Margin="365,21,0,0" VerticalAlignment="Top" IsChecked="True" Checked="RdbWindows_Checked"/>
+
+    </Grid>
+</Window>
